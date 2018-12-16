@@ -445,7 +445,7 @@ if ($mode == 'short') {
 }
 
 while (($recentCounter < $recentCounterLimit) && $rsRecent && ($recentLimit > 0)){
-  mysql_data_seek($rsRecent,$recentCounter);
+  $modx-db->dataSeek($rsRecent,$recentCounter);
   $recentRecord = $modx->fetchRow($rsRecent);
   $output .= '<li>';
   // Link to page
